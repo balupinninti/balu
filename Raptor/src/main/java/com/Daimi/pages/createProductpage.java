@@ -14,8 +14,8 @@ public class createProductpage {
 	
 	@FindBy(xpath = "//input[@name=\"searchword\"]") private WebElement searchWordTextBox;
 	@FindBy(xpath = "(//input[@value=\"Go\"])[1]") private WebElement goButton;
-	@FindBy(xpath = "(//a[@class=\"sbCalNav\"])[3]") private WebElement arrowButton;
-	@FindBy(xpath = "(//td[@class=\"sbCalTitle\"])[1]") private WebElement centertext;
+	@FindBy(xpath = "(//a[@class='sbCalNav'])[3]") private WebElement arrowButton;
+	@FindBy(xpath = "//div[@id='calendarLayer']//td[@class='sbCalTitle' and contains(text(),'October')]") private WebElement centertext;
 	
     
 
@@ -52,17 +52,18 @@ public class createProductpage {
 	}
 	public void clickArrowButton()
 	{
-		arrowButton.click();
-	for(int i=1; i>=12; i++)	
+		
+	for(int i=1;i<=12;i++)	
 	{
-		if(centertext.isDisplayed())
+		if(!centertext.isDisplayed())
 		{
-			Reporter.log("is displayed");
-			break;
+			Reporter.log("is not displayed");
+			arrowButton.click();
 		}
 		else 
 		{
-			Reporter.log("not displayed");
+			Reporter.log("October displayed");
+			break;
 		}
 	}
 		
@@ -71,7 +72,6 @@ public class createProductpage {
 	public void productPage(String textbox)
 	
 	{
-		WebDriverCommonLib wb=new WebDriverCommonLib();
 		searchWordTextBox.sendKeys(textbox);
 		
 	}

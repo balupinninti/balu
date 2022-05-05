@@ -39,7 +39,7 @@ public abstract class BaseTest implements IAutoConsts {
 
 	}
 
-	@AfterClass()
+	@AfterClass(enabled = false)
 	public void closeBrowser() {
 		driver.quit();
 	}

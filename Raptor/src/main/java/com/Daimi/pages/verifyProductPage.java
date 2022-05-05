@@ -1,5 +1,8 @@
 package com.Daimi.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.Daimi.GenericLib.BaseTest;
@@ -24,14 +27,35 @@ public class verifyProductPage extends BaseTest{
 	
 		wb.elementDisplayed(cp.getProductText(), "create product page ");
 		Thread.sleep(3000);
-		String textbox=fl.readExcelData(EXCEL_PATH, "product", 1, 1);
-		cp.productPage(textbox);
-		cp.clickGoButton();
+//		String textbox=fl.readExcelData(EXCEL_PATH, "product", 1, 1);
+//		cp.productPage(textbox);
+//		cp.clickGoButton();
+//		Thread.sleep(3000);
+//		wb.switcToAlert();
+//		System.out.println(wb.switchToAlertText());
+//	    wb.acceptAlert();
+//	    Thread.sleep(3000);
+		//cp.clickArrowButton();
+		WebElement arrowButton = driver.findElement(By.xpath("(//a[@class='sbCalNav'])[3]"));
+		WebElement centertext = driver.findElement(By.xpath("//div[@id='calendarLayer']//td[@class='sbCalTitle' and contains(text(),'May')]"));
+		
+		
+		for(int i=1;i<=12;i++)	
+		{
+			arrowButton.click();
+			if(centertext.isDisplayed())
+			{
+				Reporter.log("is  displayed");
+				//arrowButton.click();
+				break;
+			}
+			/*else 
+			{
+				Reporter.log("October displayed");
+				break;
+			}*/
+		}
 		Thread.sleep(3000);
-		wb.switcToAlert();
-		wb.switchToAlertText();
-	    wb.acceptAlert();
-		cp.clickArrowButton();
 		
 		
 		
