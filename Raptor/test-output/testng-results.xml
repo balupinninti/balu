@@ -5,45 +5,33 @@
       <![CDATA[Login Page is Displayed, PASS]]>
     </line>
     <line>
-      <![CDATA[accotntspageis displayed]]>
-    </line>
-    <line>
-      <![CDATA[title not found]]>
-    </line>
-    <line>
-      <![CDATA[title not found]]>
+      <![CDATA[create product page is displayed]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-05-02T13:18:04 IST" name="Default suite" finished-at="2022-05-02T13:19:23 IST" duration-ms="78370">
+  <suite started-at="2022-05-05T10:36:44 IST" name="Default suite" finished-at="2022-05-05T10:37:01 IST" duration-ms="17789">
     <groups>
     </groups>
-    <test started-at="2022-05-02T13:18:04 IST" name="Default test" finished-at="2022-05-02T13:19:23 IST" duration-ms="78370">
-      <class name="com.dd.VerifyAccount">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.dd.VerifyAccount@1283bb96]" started-at="2022-05-02T13:18:04 IST" name="openBrowser" finished-at="2022-05-02T13:18:11 IST" duration-ms="6843" status="PASS">
+    <test started-at="2022-05-05T10:36:44 IST" name="Default test" finished-at="2022-05-05T10:37:01 IST" duration-ms="17789">
+      <class name="com.Daimi.pages.verifyProductPage">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Daimi.pages.verifyProductPage@55b699ef]" started-at="2022-05-05T10:36:44 IST" name="openBrowser" finished-at="2022-05-05T10:36:51 IST" duration-ms="6870" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Login Page is Displayed, PASS]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="account()[pri:0, instance:com.dd.VerifyAccount@1283bb96]" started-at="2022-05-02T13:18:11 IST" name="account" finished-at="2022-05-02T13:19:22 IST" duration-ms="71297" status="PASS">
+        <test-method signature="productpage()[pri:0, instance:com.Daimi.pages.verifyProductPage@55b699ef]" started-at="2022-05-05T10:36:51 IST" name="productpage" finished-at="2022-05-05T10:37:01 IST" duration-ms="10632" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[accotntspageis displayed]]>
-            </line>
-            <line>
-              <![CDATA[title not found]]>
-            </line>
-            <line>
-              <![CDATA[title not found]]>
+              <![CDATA[create product page is displayed]]>
             </line>
           </reporter-output>
-        </test-method> <!-- account -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.dd.VerifyAccount@1283bb96]" started-at="2022-05-02T13:19:22 IST" name="closeBrowser" finished-at="2022-05-02T13:19:23 IST" duration-ms="203" status="PASS">
+        </test-method> <!-- productpage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.Daimi.pages.verifyProductPage@55b699ef]" started-at="2022-05-05T10:37:01 IST" name="closeBrowser" finished-at="2022-05-05T10:37:01 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.dd.VerifyAccount -->
+      </class> <!-- com.Daimi.pages.verifyProductPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

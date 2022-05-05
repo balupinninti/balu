@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -62,7 +63,28 @@ public class WebDriverCommonLib
 	public void switchToFrame(WebElement element) {
 		BaseTest.driver.switchTo().frame(element);
 	}
-
+public void switcToAlert()
+{
+	BaseTest.driver.switchTo().alert();
+	
+}
+public void acceptAlert()
+{
+	BaseTest.driver.switchTo().alert().accept();
+}
+public void dismissAlert()
+{
+	BaseTest.driver.switchTo().alert().dismiss();
+}
+   public String switchToAlertText() {
+	return BaseTest.driver.switchTo().alert().getText();
+}
+   
+   
+   public Point getElementLocation(WebElement element)
+   {
+	   return element.getLocation();
+   }
 	public void mouseHover(WebElement element) {
 		Actions ac = new Actions(BaseTest.driver);
 		ac.moveToElement(element).perform();
@@ -89,7 +111,7 @@ public class WebDriverCommonLib
 		jse.executeScript(script);
 	}
 
-	public void elementDisplayed(WebElement element, String elementName) {
+	public void elementDisplayed(WebElement element , String elementName) {
 		if (element.isDisplayed()) {
 			Assert.assertTrue(true);
 			Reporter.log(elementName + "is displayed", true);
