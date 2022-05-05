@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class FileLib {
 //pushing from eclipse to github
+//pulling from github to eclipse	
 	public String readPropertyData(String path, String key) throws Throwable
 	{
 		FileInputStream fis = new FileInputStream(path);
